@@ -1,0 +1,158 @@
+Jmeter - HW_1
+Сделать сценарий с перечисленными эндпоинтами
+
+Дать нагрузку на 50, 250, 500 потоков.
+Результаты прогонов выгрузить в CSV.
+Настройки Jmeter, файл .jmx выгружаем на гит.
+
+http://162.55.220.72:5005/get_method
+
+1) c
+req.
+GET
+name: str
+age: int
+
+1. Test Plan->Add-> Threads Group
+Name- EP_1
+2. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+GET
+Path /get_method
++Add
+name inna
+age 30
+3. Добавляем к EP_1 Summary Report, Viev Result Tree
+Start
+
+
+2) http://162.55.220.72:5005/user_info_2
+req.
+POST
+name: str
+age: int
+salary: int
+
+
+1. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request называем /user_info_2
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+POST
+Path /user_info_2
++Add
+name inna
+age 30
+salary 100000
+
+
+3) http://162.55.220.72:5005/user_info_3
+req.
+POST
+name: str
+age: int
+salary: int
+
+
+1. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request называем /user_info_3
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+POST
+Path /user_info_3
++Add
+name inna
+age 30
+salary 100000
+
+4) http://162.55.220.72:5005/object_info_1
+req.
+GET
+name: str
+age: int
+weight: int
+
+
+1. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request называем /object_info_1
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+GET
+Path /object_info_1
++Add
+name inna
+age 30
+weight 50
+
+5) http://162.55.220.72:5005/object_info_2
+req.
+GET
+name: str
+age: int
+salary: int
+
+
+1. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request называем /object_info_2
+req.
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+GET
+Path /object_info_2
+req.
++Add
+name inna
+age 30
+salary 100000
+
+6) http://162.55.220.72:5005/object_info_3
+req.
+GET
+name: str
+age: int
+salary: int
+
+1. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request называем /object_info_3
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+GET
+Path /object_info_3
++Add
+name inna
+age 30
+salary 100000
+
+7) http://162.55.220.72:5005/object_info_4
+req.
+GET
+name: str
+age: int
+salary: int
+
+1. Создаем внутри EP_1 HTTP Request: Add-> Sampler-> HTTP Request называем /object_info_4
+Заполняем запрос:
+Basic
+Protocol http://
+IP 162.55.220.72
+Port 5005
+GET
+Path /object_info_4
++Add
+name inna
+age 30
+salary 100000
